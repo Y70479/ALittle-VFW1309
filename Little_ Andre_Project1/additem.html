@@ -24,15 +24,17 @@ Project 1: Mega Weight Lost Project - Add Item page
 		<title>Mega Weight Lost Project</title>
 	</head>
 	<body>
-		<header>
+		<header> <!-- Custom Logo for the header. -->
 			<h1>Mega Weight Lost Project</h1>
 		</header>
-		<form action="#" method="post">
+		
+		<form action="#" method="post"> <!-- Start of my form section -->
 			<fieldset>
 				<legend>Add a Meal</legend>
 				<ul>
-					<li>
-						<label for="mealTime">Choose meal time:</label>
+					<li><label for="date">Date: </label><input type="date" id="date" /></li>
+					<li> <!-- This is the time of the day you choose to log the meal for -->
+						<label for="mealTime">Meal time:</label>
 							<select id="mealTime">
 								<option value="No meal time Selected" selected disabled>--Make a Choice--</option>
 								<option>Breakfast</option>
@@ -40,29 +42,24 @@ Project 1: Mega Weight Lost Project - Add Item page
 								<option>Dinner</option>
 							</select>
 					</li>
-					<li>
-						<label for="itemNumber">Number of food items?</label>
-							<select id="itemNumber">
-								<option selected>0</option>
-								<option>1</option>
-								<option>2</option>
-								<option>3</option>
-								<option>4</option>
-								<option>5</option>
-								<option>6</option>
-								<option>7</option>
-								<option>8</option>
-								<option>9</option>
-								<option>10</option>
-							</select>
-					</li>
-					<li></li>
-					<li></li>
-					<li></li>
-					<li></li>
+					<li><label for="name1">Name: </label><input type="text" id="name1" /></li>
+					<li><label for="fat">Total Fat: </label><br><input type="text" id="fat" placeholder="How many grams?" /><label for="fat">g</label></li>
+					<li><label for="carbs">Carbohydrates: </label><input type="text" id="carbs" placeholder="How many grams?" /><label for="fat">g</label></li>
+					<li><label for="pro">Protein: </label><br><input type="text" id="pro" placeholder="How many grams?" /><label for="fat">g</label></li>
+					<li><label for="servings">Serving Size: </label><br><input type="range" id="servings" /></li>
+					<li><label>Add Item:</label><br>
+						<input type="radio" name="add" value="Yes" />Yes<br>
+						<input type="radio" name="add" value="No" />No
+					</li><br>
+					<li><label for="addInfo">Notes about Meal: </label><br><textarea id="addInfo"></textarea></li>
 				</ul>
-			</fieldset>
-		</form>
-		
+			</fieldset><br>
+			<input type="hidden" value="true" />
+			<input type="submit" value="Continue" />
+		</form><br>
+		<nav>
+			<a href="#">Display Stored Data</a>
+			<a href="#">Clear Stored Data</a>
+		</nav>
 	</body>
 </html>
