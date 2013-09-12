@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+
+<!-- 
+
+Andre Little
+Class: Visual Frame Works
+Term: 1309
+Instructor: Mr. Gibson
+Completed Date: 9/9/2013
+Project 1: Mega Weight Lost Project - Add Item page
+
+-->
+
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="description" content="Weight lost tracker app. It tracks your calorie intake and gives you a workout regimen based on it." /> 
+		<meta name="keywords" content="Weight lost tracker, losing weight, getting fit, calorie tracker," />
+		<meta name="robots" content="index, follow" />
+		<meta name="viewport" content="user-scalable=no, width=device-width" />
+		<meta name="viewport" content="target-densitydpi=device-dpi" />
+		<meta name="HandheldFriendly" content="true" />
+		<meta name="MobileOptimized" content="320" />
+		<title>Mega Weight Lost Project</title>
+	</head>
+	<body>
+		<header> <!-- Custom Logo for the header. -->
+			<h1>Mega Weight Lost Project</h1>
+		</header>
+		
+		<form action="#" method="post"> <!-- Start of my form section -->
+			<fieldset>
+				<legend>Add a Meal</legend>
+				<ul>
+					<li><label for="date">Date: </label><input type="date" id="date" /></li>
+					<li> <!-- This is the time of the day you choose to log the meal for -->
+						<label for="mealTime">Meal time:</label>
+							<select id="mealTime">
+								<option value="No meal time Selected" selected disabled>--Make a Choice--</option> 
+								<option>Breakfast</option>
+								<option>Lunch</option>
+								<option>Dinner</option>
+							</select>
+					</li>
+					<li><label for="name1">Name: </label><input type="text" id="name1" /></li>
+					<li><label for="fat">Total Fat: </label><br><input type="text" id="fat" placeholder="How many grams?" /><span>g</span>
+					<li><label for="carbs">Carbohydrates: </label><br><input type="text" id="carbs" placeholder="How many grams?" /><span>g</span>
+					<li><label for="pro">Protein: </label><br><input type="text" id="pro" placeholder="How many grams?" /><span>g</span>
+					<li><label for="servings">Serving Size: </label><br><input type="range" id="servings" /></li>
+					<li><span>Add Item:</span><br>
+						<input type="radio" id="yes" name="add" value="Yes" /><label> Yes</label><br>
+						<input type="radio" id="no" name="add" value="No" /><label> No</label>
+					</li>
+					<li><label for="addInfo">Notes about Meal: </label><br><textarea id="addInfo"></textarea></li>
+					<li><input type="hidden" value="true" /></li>
+				</ul>
+			</fieldset><br>
+			<input type="submit" value="Continue" />
+		</form><br>
+		<nav>
+			<a href="#">Display Stored Data</a>
+			<a href="#">Clear Stored Data</a>
+		</nav>
+	</body>
+</html>
