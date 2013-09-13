@@ -22,21 +22,59 @@ window.addEventListener("DOMContentLoaded", function(){
 		return elTag;
 	};
 	
-	var createEl = function (){
+	var createEl = function (x){
 		var makeEl = document.createElement(x);
 		return makeEl;
 	}
 	/* ------ End of the Shortcuts ------ */
 	
-	// Create drop down.
+		// Find Value of Picked Radio.
+	function getSelectedRadio (){
+		var radio = document.forms[0].add
+		for (var i=0; i<radio.length; i++){
+			if (radio[i].checked){
+				addValue = radio[i].value
+			}
+		}
+	};
+	
+	// Save Data Function
+	function dataSaved(){
+		var randomNum = Math.floor(Math.random()*1000000001);
+		// Get all Form data.
+		getSelectedRadio ();
+		var item = {};
+			item.dates = ["Date:", getId("date").value];
+			item.times = ["Meal Time:", getId("mealTime").value];
+			item.itemname = ["Name:", getId("name1").value];
+			item.fatgrams = ["Grams of Fat:", getId("fat").value];
+			item.carbgrams = ["Gram of Carbs:", getId("carbs").value];
+			item.programs = ["Grams of Protein:", getId("pro").value];
+			item.size = ["Serving Size:", getId("servings").value];
+			item.additional = ["Add item:", addValue];
+			item.notes = ["Notes about Meal:", getId("addInfo").value];
+			// Save Data to local Storage.
+			localStorage.setItem(randomNum, JSON.stringify(item));
+			alert("Meal has been Saved!");
+			window.location.reload();	
+	};
+
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
 	
 	
 	
 	// Default Variables
-	var mealTimes = ["--Make a Choice--", "Breakfast", "Lunch", "Dinner"];
-	
+	var mealTimes = ["--Make a Choice--", "Breakfast", "Lunch", "Dinner"],
+		addValue;
 	
 	 
 	
@@ -58,11 +96,11 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	
 	//Links and Click Submit Events.
-	var displayData =
+/*	var displayData = getId("displayInfo");
 	displayData.addEventListener("click", gotData);
-	var clearData =	
-	clearData.addEventListener("click", dataCleared);
-	var saveData = 
+	var clearData =	getId("clearInfo");
+	clearData.addEventListener("click", dataCleared); */
+	var saveData = getId("submitInfo"); 
 	saveData.addEventListener("click", dataSaved);
 	
 
