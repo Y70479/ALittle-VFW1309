@@ -59,6 +59,36 @@ window.addEventListener("DOMContentLoaded", function(){
 			window.location.reload();	
 	};
 
+	// Display Data Funtion
+	function gotData() {
+		if (localStorage.length === 0){
+			alert("There is no data saved at this time.");
+		} else {
+			//hideForm("on");
+			var newDiv = createEl("newDiv");
+			newDiv.setAttribute("id", "storedItems");
+			var newList = createEl("ul");
+			newDiv.appendChild(newList);
+			document.body.appendChild(newDiv);
+			getId("storedItems").style.display = "display"; 
+			for (var i=0, d=localStorage.length; i<d; i++){
+				var newLi = createEl("li");
+				newList.appendChild(newLi);
+				var key = localStorage.key(i);
+				var value = localStorage.getItem(key);
+				var obj = JSON.parse(value);
+				var newSubList = createEl("ul");
+				newLi.appendChild(newSubList);
+				for (var e in obj){
+					var newSubLi = createEl("li");
+					newSubList.appendChild(newSubLi);
+					var optSubText = obj[e][0]+" "+obj[e][1];
+					newSubLi.innerHTML = optSubText;
+				}
+			}
+		}
+	};
+	
 	
 	
 	
@@ -96,10 +126,10 @@ window.addEventListener("DOMContentLoaded", function(){
 	
 	
 	//Links and Click Submit Events.
-/*	var displayData = getId("displayInfo");
+	var displayData = getId("displayInfo");
 	displayData.addEventListener("click", gotData);
-	var clearData =	getId("clearInfo");
-	clearData.addEventListener("click", dataCleared); */
+	//var clearData =	getId("clearInfo");
+	//clearData.addEventListener("click", dataCleared); 
 	var saveData = getId("submitInfo"); 
 	saveData.addEventListener("click", dataSaved);
 	
