@@ -64,7 +64,7 @@ window.addEventListener("DOMContentLoaded", function(){
 		if (localStorage.length === 0){
 			alert("There is no data saved at this time.");
 		} else {
-			//hideForm("on");
+			hideForm("on");
 			var newDiv = createEl("newDiv");
 			newDiv.setAttribute("id", "storedItems");
 			var newList = createEl("ul");
@@ -86,6 +86,28 @@ window.addEventListener("DOMContentLoaded", function(){
 					newSubLi.innerHTML = optSubText;
 				}
 			}
+		}
+	};
+	
+	 // Hide Form Data.
+	function hideForm(f){
+		switch(f){
+			case "on":
+				getId("docForm").style.display = "none";
+				getId("clearInfo").style.display = "inline";
+				getId("displayInfo").style.display = "none";
+				getId("addNewMeal").style.display = "inline";
+				break;
+			case "off":
+				getId("docForm").style.display = "block";
+				getId("clearInfo").style.display = "inline";
+				getId("displayInfo").style.display = "inline";
+				getId("addNewMeal").style.display = "none";
+				getId("storedItems").style.display = "none";
+				break;
+			default:
+				return false;
+		
 		}
 	};
 	
