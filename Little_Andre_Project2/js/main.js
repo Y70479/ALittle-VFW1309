@@ -3,7 +3,7 @@ Andre Little
 Class: Visual Frame Works
 Term: 1309
 Instructor: Mr. Gibson
-Completed Date: 9/12/2013
+Completed Date: 9/13/2013
 Project 2: Mega Weight Lost Project - JS Source
 */
 
