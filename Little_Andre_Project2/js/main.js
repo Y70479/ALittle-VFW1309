@@ -109,49 +109,30 @@ window.addEventListener("DOMContentLoaded", function(){
 				return false;
 		
 		}
+	};	
+	
+	//Clear Data Function
+	function dataCleared(){
+		if (localStorage.length === 0){
+			alert("There is no data to be cleared.")
+		} else {
+			localStorage.clear();
+			alert("All saved data has been erased.")
+			window.location.reload();
+			return false;
+		}
 	};
-	
-	
-	
-	
-	
-	
-	
-	
-	
-
-	
-	
-	
 	
 	// Default Variables
 	var mealTimes = ["--Make a Choice--", "Breakfast", "Lunch", "Dinner"],
 		addValue;
 	
-	 
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
-	
 	
 	//Links and Click Submit Events.
 	var displayData = getId("displayInfo");
 	displayData.addEventListener("click", gotData);
-	//var clearData =	getId("clearInfo");
-	//clearData.addEventListener("click", dataCleared); 
+	var clearData =	getId("clearInfo");
+	clearData.addEventListener("click", dataCleared); 
 	var saveData = getId("submitInfo"); 
 	saveData.addEventListener("click", dataSaved);
 	
