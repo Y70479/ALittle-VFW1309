@@ -3,7 +3,7 @@ Andre Little
 Class: Visual Frame Works
 Term: 1309
 Instructor: Mr. Gibson
-Completed Date: 9/13/2013
+Completed Date: 9/14/2013
 Project 2: Mega Weight Lost Project - JS Source
 */
 
@@ -38,6 +38,28 @@ window.addEventListener("DOMContentLoaded", function(){
 		}
 	};
 	
+		 // Hide Form Data.
+	function hideForm(f){
+		switch(f){
+			case "on":
+				getId("docForm").style.display = "none";
+				getId("clearInfo").style.display = "inline";
+				getId("displayInfo").style.display = "none";
+				getId("addNewMeal").style.display = "inline";
+				break;
+			case "off":
+				getId("docForm").style.display = "block";
+				getId("clearInfo").style.display = "inline";
+				getId("displayInfo").style.display = "inline";
+				getId("addNewMeal").style.display = "none";
+				getId("storedItems").style.display = "none";
+				break;
+			default:
+				return false;
+		
+		}
+	};	
+	
 	// Save Data Function
 	function dataSaved(){
 		var randomNum = Math.floor(Math.random()*1000000001);
@@ -65,11 +87,14 @@ window.addEventListener("DOMContentLoaded", function(){
 			alert("There is no data saved at this time.");
 		} else {
 			hideForm("on");
-			var newDiv = createEl("newDiv");
+			var newDiv = createEl("div");
 			newDiv.setAttribute("id", "storedItems");
+			document.body.appendChild(newDiv);
+			var newFieldSet = createEl("fieldset");
+			newFieldSet.setAttribute("id", "infoFieldSet");
+			newDiv.appendChild(newFieldSet);
 			var newList = createEl("ul");
 			newDiv.appendChild(newList);
-			document.body.appendChild(newDiv);
 			getId("storedItems").style.display = "display"; 
 			for (var i=0, d=localStorage.length; i<d; i++){
 				var newLi = createEl("li");
@@ -88,36 +113,14 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 	};
-	
-	 // Hide Form Data.
-	function hideForm(f){
-		switch(f){
-			case "on":
-				getId("docForm").style.display = "none";
-				getId("clearInfo").style.display = "inline";
-				getId("displayInfo").style.display = "none";
-				getId("addNewMeal").style.display = "inline";
-				break;
-			case "off":
-				getId("docForm").style.display = "block";
-				getId("clearInfo").style.display = "inline";
-				getId("displayInfo").style.display = "inline";
-				getId("addNewMeal").style.display = "none";
-				getId("storedItems").style.display = "none";
-				break;
-			default:
-				return false;
 		
-		}
-	};	
-	
 	//Clear Data Function
 	function dataCleared(){
 		if (localStorage.length === 0){
 			alert("There is no data to be cleared.")
 		} else {
-			localStorage.clear();
 			alert("All saved data has been erased.")
+			localStorage.clear();
 			window.location.reload();
 			return false;
 		}
