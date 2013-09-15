@@ -25,7 +25,7 @@ Project 1: Mega Weight Lost Project - Add Item page
 	</head>
 	<body>
 		<header> <!-- Custom Logo for the header. -->
-			<h1>Mega Weight Lost Project</h1>
+			<h1 id="logo2">Mega Weight Lost Project</h1>
 		</header>
 		
 		<form action="#" method="post" id="docForm"> <!-- Start of my form section -->
@@ -52,15 +52,17 @@ Project 1: Mega Weight Lost Project - Add Item page
 						<input type="radio" id="no" name="add" value="No" /><label for="no"> No</label>
 					</li>
 					<li><label for="addInfo">Notes about Meal: </label><br><textarea id="addInfo"></textarea></li>
-					<li><input type="hidden" value="true" /></li>
+					<li class="hideHidden"><input type="hidden" value="true" /></li>
 				</ul>
 			</fieldset><br>
 			<input type="button" id="submitInfo" value="Save Meal" />
 		</form><br>
-		<nav>
-			<a href="#" id="displayInfo">Display Stored Data</a>
-			<a href="#" id="clearInfo">Clear Stored Data</a>
-			<a href="additem.html" id="addNewMeal" style="display:none">Add a Meal</a>
+		<nav class="allLinks">
+			<ul id="naviLinks">
+				<li><a href="#" id="displayInfo">Display Data</a></li>
+				<li><a href="#" id="clearInfo">Clear Data</a></li>
+				<li><a href="additem.html" id="addNewMeal" style="display:none">Add a Meal</a></li>
+			</ul>
 		</nav>
 		<script src="js/main.js" type="text/javascript"></script>
 	</body>
