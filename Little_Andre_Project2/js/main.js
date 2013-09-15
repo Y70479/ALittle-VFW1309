@@ -87,14 +87,14 @@ window.addEventListener("DOMContentLoaded", function(){
 			alert("There is no data saved at this time.");
 		} else {
 			hideForm("on");
-			var newDiv = createEl("div");
+			var newDiv = createEl("Div");
 			newDiv.setAttribute("id", "storedItems");
 			document.body.appendChild(newDiv);
 			var newFieldSet = createEl("fieldset");
 			newFieldSet.setAttribute("id", "infoFieldSet");
 			newDiv.appendChild(newFieldSet);
 			var newList = createEl("ul");
-			newDiv.appendChild(newList);
+			newFieldSet.appendChild(newList);
 			getId("storedItems").style.display = "display"; 
 			for (var i=0, d=localStorage.length; i<d; i++){
 				var newLi = createEl("li");
@@ -113,6 +113,7 @@ window.addEventListener("DOMContentLoaded", function(){
 			}
 		}
 	};
+
 		
 	//Clear Data Function
 	function dataCleared(){
