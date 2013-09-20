@@ -1,0 +1,118 @@
+
+html {
+	padding: 0px 5px;
+}
+
+
+
+/* Background style of the Page */
+body {
+	background: #1a292f;
+}
+
+/* Styling for the "Title/Logo" */
+h1 {
+	color: steelblue;
+	text-align: center;
+	text-shadow: 0px 3px 2px black;
+	font-family: sans-serif;
+	padding: 8px;
+	border-radius: 8px;
+	border: 2px solid;
+	border-top-color: steelblue;
+	border-left: transparent;
+	border-right: transparent;
+	border-bottom-color: steelblue;	
+}
+
+/* Styling of the legend and fieldset */
+legend{
+	font: normal 16px sans-serif;
+	text-align: center;
+	color: #151515;
+	padding: 5.1px;
+	background-color: #c3efff; 
+	border-radius: 8px;
+	border: 2px solid;
+	border-top-color: steelblue;
+	border-left-color: steelblue;
+	border-right-color: steelblue;
+	border-bottom: transparent;	
+}
+
+fieldset {
+	color: #151515;
+	background:	 -webkit-linear-gradient(#c3efff 0%, #e3e3e3 100%);
+	border-radius: 32px;
+	border-color: steelblue;
+	padding: 24px;
+}
+
+/* li Styles */
+.hideHidden {
+	display: none;
+}
+
+
+li {
+    margin: 5.1px;
+    list-style: none;
+}
+
+/* Stored Data Field Set */
+#infoFieldSet {
+	color: #151515;
+	background:	 -webkit-linear-gradient(#c3efff 0%, #e3e3e3 100%);
+	border-radius: 32px;
+	border-color: steelblue;
+	padding: 24px;
+	
+}
+
+/* Submit Botton Style */
+input[type="button"] {
+	margin-right: 5px;
+	width: 300px;
+	height: 40px;
+	border: none;
+	background-color: steelblue;
+	color: black;
+	font-family: sans-serif;
+	font-size: inherit;
+}
+
+/* Input field Styles */
+input[type=text] {
+	width: auto;
+	height: 25px;
+	border: 2px solid grey;
+	background: lightyellow;
+}
+
+textarea {
+	width: auto;
+	height: auto;
+	border: 2px solid grey;
+}
+
+/* Footer Links */
+.naviLinks {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+
+#naviLinks > li {
+	font-size: 19.5px;
+	float: left;
+}
+
+/* Launch Page style */
+article {
+	line-height: 20px;
+	color: #151515;
+	background:	 -webkit-linear-gradient(#c3efff 0%, #e3e3e3 100%);
+	border-radius: 32px;
+	border-color: steelblue;
+	padding: 10px;
+}
